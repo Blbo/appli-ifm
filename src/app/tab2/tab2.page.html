@@ -1,15 +1,18 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+  <ion-toolbar class="entete">
+    <ion-searchbar color="light" id="search" search-icon="undefined" placeholder="Rechercher un profil"></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button color="light">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+    <ion-toolbar id="titreProfil">
+      <ion-title class="titre">Mes candidatures</ion-title>
     </ion-toolbar>
   </ion-header>
 

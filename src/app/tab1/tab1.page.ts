@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { Router} from '@angular/router';
+import {DataService} from '../services/data.service';
+
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +10,16 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+
+
+  constructor(public router: Router, public dataService: DataService) {  }
+
+  detailAnnonce(annonce) {
+    console.log(annonce.id);
+    const URLannonce = '/detail/' + annonce.id;
+    /*this.dataService.setData(annonce.id, annonce);*/
+    this.router.navigateByUrl(URLannonce);
+  }
 
 }
+

@@ -12,7 +12,7 @@ export class DetailPage implements OnInit {
 
   data: any;
 
-  public like = 'unliked';
+
   public iconName = 'heart-outline';
 
   constructor( private route: ActivatedRoute,
@@ -30,24 +30,21 @@ export class DetailPage implements OnInit {
 
   toggleLikeState() {
 
-
-    if (this.like === 'unliked') {
-      this.like = 'liked';
+    console.log(this.dataService.data[this.data.id].likeState);
+    if (this.dataService.data[this.data.id].likeState === 'unliked') {
+      // this.like = 'liked';
       this.iconName = 'heart';
       this.data.likeState = 'liked';
-      this.dataService.data[this.id].likeState = 'liked';
-      // this.dataService.data = 'liked';
-      // this.data[this.likeState] = 'liked';
+      this.dataService.data[this.data.id].likeState = 'liked';
 
-      console.log(this.data);
+      console.log(this.dataService.data[this.data.id].likeState);
     } else {
-      this.like = 'unliked';
+      // this.like = 'unliked';
       this.iconName = 'heart-outline';
       this.data.likeState = 'unliked';
-      this.dataService.data[this.id].likeState  = 'unliked';
-      // this.data[this.likeState] = 'unliked';
+      this.dataService.data[this.data.id].likeState  = 'unliked';
 
-      console.log(this.data);
+      console.log(this.dataService.data[this.data.id].likeState);
     }
   }
 

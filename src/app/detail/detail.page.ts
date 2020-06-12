@@ -24,9 +24,15 @@ export class DetailPage implements OnInit {
   ngOnInit() {
     if (this.route.snapshot.data.special) {
       this.data = this.route.snapshot.data.special;
-
+      if (this.dataService.data[this.data.id].likeState === 'unliked') {
+      this.iconName = 'heart-outline';
+    } else {
+      this.iconName = 'heart';
+    }
     }
   }
+
+
 
   toggleLikeState() {
 
@@ -34,14 +40,27 @@ export class DetailPage implements OnInit {
     if (this.dataService.data[this.data.id].likeState === 'unliked') {
       // this.like = 'liked';
       this.iconName = 'heart';
-      this.data.likeState = 'liked';
+      //this.data.likeState = 'liked';
       this.dataService.data[this.data.id].likeState = 'liked';
 
       console.log(this.dataService.data[this.data.id].likeState);
     } else {
-      // this.like = 'unliked';
       this.iconName = 'heart-outline';
-      this.data.likeState = 'unliked';
+      // this.data.likeState = 'unliked';
+      this.dataService.data[this.data.id].likeState  = 'unliked';
+
+      console.log(this.dataService.data[this.data.id].likeState);
+    }
+  }
+
+  addCandidature() {
+    if (this.dataService.data[this.data.id].candidature === 'false') {
+      this.dataService.data[this.data.id].candidature = 'true';
+
+      console.log(this.dataService.data[this.data.id].likeState);
+    } else {
+      this.iconName = 'heart-outline';
+      // this.data.likeState = 'unliked';
       this.dataService.data[this.data.id].likeState  = 'unliked';
 
       console.log(this.dataService.data[this.data.id].likeState);

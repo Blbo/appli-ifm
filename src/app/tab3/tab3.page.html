@@ -19,7 +19,7 @@
   <!--  Liste des annonces:-->
 
   <ion-card *ngFor="let annonce of dataService.data">
-    <ion-item *ngIf="annonce.likeState=='liked'">
+    <ion-item *ngIf="annonce.likeState!='unliked'">
       <ion-avatar item-start>
         <img src='{{annonce.img}}'>
       </ion-avatar>

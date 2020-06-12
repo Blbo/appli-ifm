@@ -40,7 +40,6 @@ export class DetailPage implements OnInit {
     if (this.dataService.data[this.data.id].likeState === 'unliked') {
       // this.like = 'liked';
       this.iconName = 'heart';
-      //this.data.likeState = 'liked';
       this.dataService.data[this.data.id].likeState = 'liked';
 
       console.log(this.dataService.data[this.data.id].likeState);

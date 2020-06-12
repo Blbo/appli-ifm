@@ -40,7 +40,6 @@ export class DetailPage implements OnInit {
     if (this.dataService.data[this.data.id].likeState === 'unliked') {
       // this.like = 'liked';
       this.iconName = 'heart';
-      //this.data.likeState = 'liked';
       this.dataService.data[this.data.id].likeState = 'liked';
 
       console.log(this.dataService.data[this.data.id].likeState);
@@ -56,14 +55,9 @@ export class DetailPage implements OnInit {
   addCandidature() {
     if (this.dataService.data[this.data.id].candidature === 'false') {
       this.dataService.data[this.data.id].candidature = 'true';
-
-      console.log(this.dataService.data[this.data.id].likeState);
     } else {
       this.iconName = 'heart-outline';
-      // this.data.likeState = 'unliked';
       this.dataService.data[this.data.id].likeState  = 'unliked';
-
-      console.log(this.dataService.data[this.data.id].likeState);
     }
   }
 

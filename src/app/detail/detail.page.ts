@@ -58,7 +58,6 @@ export class DetailPage implements OnInit {
 
       console.log(this.dataService.data[this.data.id].candidature);
     } else {
-      // this.iconName = 'heart-outline';
       this.dataService.data[this.data.id].candidature  = 'false';
 
       console.log(this.dataService.data[this.data.id].candidature);

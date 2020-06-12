@@ -1,0 +1,51 @@
+.entete {
+  background-color: rgb(178, 0, 0);
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+
+}
+
+.titre {
+  font-size: 20px;
+  text-align: left;
+  padding-left: 0;
+  padding-right: 5%;
+  color: rgb(151, 151, 165);
+}
+
+#titreProfil {
+  padding-top: 0;
+}
+
+ion-avatar {
+  margin-right: 30px;
+  margin-left: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+
+ion-card {
+  margin: 0;
+}
+
+.description {
+  padding-left: 8%;
+  padding-right: 8%;
+  text-align: left;
+}
+
+ion-tab-bar, ion-tab-button{
+  background-color: rgb(178, 0, 0);
+  color: white;
+}
+
+ion-icon{
+  color: white;
+}
+
+#likeIcon {
+  color: rgb(255, 220, 115);
+  margin-right: 30px;
+}

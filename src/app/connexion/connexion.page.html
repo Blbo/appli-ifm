@@ -1,0 +1,35 @@
+<ion-header>
+  <div class="centrer"> <img src="../../assets/img/logo.jpeg" height="200" width="330"/></div>
+</ion-header>
+<ion-content>
+  <div id="divFormConnexion">
+    <h2>Pour consulter nos offres, merci de vous identifier</h2>
+    <form [formGroup]="connexionForm">
+      <ion-item>
+        <ion-label position="floating">Adresse email</ion-label>
+        <ion-input type="text" formControlName="email"></ion-input>
+      </ion-item>
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.email">
+          <div class="error-message" *ngIf="connexionForm.get('email').hasError(error.type) && (connexionForm .get('email').dirty || connexionForm.get('email').touched)">
+            {{error.message}}
+          </div>
+        </ng-container>
+      </div>
+      <ion-item>
+        <ion-label position="floating">Mot de passe</ion-label>
+        <ion-input type="password" formControlName="mdp"></ion-input>
+      </ion-item>
+      <div class="error-messages">
+        <ng-container *ngFor="let error of error_messages.mdp">
+          <div class="error-message" *ngIf="connexionForm .get('mdp').hasError(error.type) &&
+(connexionForm .get('mdp').dirty || connexionForm.get('mdp').touched)">
+            {{error.message}}
+          </div>
+        </ng-container>
+      </div>
+      <ion-button [disabled]="!connexionForm .valid" id="consulter" color="danger" expand="block" fill="outline"
+                  (click)="connexion()">Valider</ion-button>
+    </form>
+  </div>
+</ion-content>

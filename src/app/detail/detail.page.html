@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="entete">
+    <ion-searchbar color="light" id="search" search-icon="undefined" placeholder="Rechercher un profil"></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button color="light">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <!--  Details de l'annonce:-->
+
+  <ion-card>
+    <ion-item>
+      <ion-avatar item-start>
+        <img src='{{data.img}}'>
+      </ion-avatar>
+      <ion-label>
+        <h2 class="nomSociete">{{data.nom}}</h2>
+        <p>
+          {{data.offre}}
+          <br>
+          <span>{{data.adresse}}</span>
+        </p>
+      </ion-label>
+      <ion-icon id="likeIcon" (click)="toggleLikeState()" size="large" [name]="iconName"></ion-icon>
+    </ion-item>
+  </ion-card>
+  <div class="description">
+    <h3 class="titre">Présentation:</h3>
+    <p>{{data.presentation}}</p>
+    <h3 class="titre">Activités:</h3>
+    <p>{{data.activites}}</p>
+    <h3 class="titre">Sur le poste:</h3>
+    <p>{{data.poste}}</p>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar >
+    <ion-tabs >
+      <ion-tab-bar slot="full">
+        <ion-tab-button tab="tab1" routerLink="/tabs/tab1">
+          <ion-icon name="search"></ion-icon>
+          <ion-label>Recherche</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="tab2" routerLink="/tabs/tab2">
+          <ion-icon name="chatbox"></ion-icon>
+          <ion-label>Candidatures</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="tab3" routerLink="/tabs/tab3">
+          <ion-icon name="heart"></ion-icon>
+          <ion-label>Mes favoris</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="tab4" routerLink="/tabs/tab4">
+          <ion-icon name="person-circle-outline"></ion-icon>
+          <ion-label>Mon profil</ion-label>
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-toolbar>
+</ion-footer>

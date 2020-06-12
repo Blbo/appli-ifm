@@ -1,0 +1,93 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="entete">
+    <ion-searchbar color="light" id="search" search-icon="undefined" placeholder="Rechercher un profil"></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button color="light">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar id="titreProfil">
+      <ion-title class="titre">Mon profil</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class="mbsc-grid mbsc-grid-fixed md-custom-usage">
+    <div class="mbsc-row mbsc-justify-content-center">
+      <div class="mbsc-col-md-10 mbsc-col-xl-9">
+        <h4>Using elements inside existing forms</h4>
+        <form class="custom-form">
+          <div class="mbsc-row">
+            <div class="mbsc-col-md-3 mbsc-col-6">
+              <ion-item lines="none">
+                <ion-label id="nomLabel" position="stacked" >Nom</ion-label>
+                <input id="surname" type="text"  class="custom-input" />
+              </ion-item>
+            </div>
+            <div class="mbsc-col-md-3 mbsc-col-6">
+              <ion-item lines="none">
+                <ion-label position="stacked" for="firstname">Prénom</ion-label>
+                <input id="firstname" type="text"  class="custom-input" />
+              </ion-item>
+            </div>
+            <div class="mbsc-col-md-6 mbsc-col-12">
+              <ion-item lines="none">
+                <ion-label position="stacked" for="city">Ville</ion-label>
+                <input id="city" type="text" class="custom-input" />
+              </ion-item>
+            </div>
+            <div class="mbsc-col-md-6 mbsc-col-12">
+              <ion-item lines="none">
+                <ion-label position="stacked" for="email">Email</ion-label>
+                <input id="email" type="email"  class="custom-input" />
+              </ion-item>
+            </div>
+          </div>
+          <div class="mbsc-row">
+            <div class="mbsc-col-md-3 mbsc-col-6">
+              <ion-item lines="none">
+                <ion-label position="stacked" for="telephone">Téléphone</ion-label>
+                <input id="telephone" type="number"  class="custom-input" />
+              </ion-item>
+            </div>
+            <div class="mbsc-col-md-3 mbsc-col-6">
+              <ion-item lines="none">
+                <ion-label position="stacked" for="contrat">Type de contrat</ion-label>
+                <input id="contrat" type="text"  class="custom-input" />
+              </ion-item>
+            </div>
+            <div class="mbsc-col-md-3 mbsc-col-6">
+              <ion-item lines="none">
+                <ion-label position="stacked" for="emploi">Emploi recherché</ion-label>
+                <input id="emploi" type="text"  class="custom-input" />
+              </ion-item>
+            </div>
+            <div class="localisationRayon">
+              <ion-item lines="none">
+                <ion-label position="stacked" for="localisation">Localisation</ion-label>
+                <input id="localisation" type="text"  class="custom-input" />
+                <ion-label position="stacked" for="rayon">Rayon</ion-label>
+                <input id="rayon" type="text"  class="custom-input" />
+              </ion-item>
+            </div>
+            <div class="mbsc-col-md-3 mbsc-col-6">
+              <ion-item lines="none">
+                <ion-label position="stacked" for="disponibilite">Disponibilité</ion-label>
+                <input  id="disponibilite" type="text"  class="custom-input" />
+              </ion-item>
+            </div>
+          </div>
+          <div class="mbsc-row">
+            <div class="mbsc-col-6">
+              <ion-button expand="full" shape="round" color="primary">ENREGISTRER</ion-button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</ion-content>

@@ -57,13 +57,12 @@ export class DetailPage implements OnInit {
     if (this.dataService.data[this.data.id].candidature === 'false') {
       this.dataService.data[this.data.id].candidature = 'true';
 
-      console.log(this.dataService.data[this.data.id].likeState);
+      console.log(this.dataService.data[this.data.id].candidature);
     } else {
-      this.iconName = 'heart-outline';
-      // this.data.likeState = 'unliked';
-      this.dataService.data[this.data.id].likeState  = 'unliked';
+      // this.iconName = 'heart-outline';
+      this.dataService.data[this.data.id].candidature  = 'false';
 
-      console.log(this.dataService.data[this.data.id].likeState);
+      console.log(this.dataService.data[this.data.id].candidature);
     }
   }
 

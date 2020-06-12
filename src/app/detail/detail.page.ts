@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {NavController} from '@ionic/angular';
+import { DataService } from '../services/data.service';
 
 @Component({
   selector: 'app-detail',
@@ -10,35 +11,42 @@ import {NavController} from '@ionic/angular';
 export class DetailPage implements OnInit {
 
   data: any;
-  public likeState = 'unliked';
+
+  public like = 'unliked';
   public iconName = 'heart-outline';
 
   constructor( private route: ActivatedRoute,
                private router: Router,
-               private navCtrl: NavController) {
+               private navCtrl: NavController,
+               public dataService: DataService) {
   }
 
   ngOnInit() {
     if (this.route.snapshot.data.special) {
       this.data = this.route.snapshot.data.special;
-      console.log(this.data.img);
+
     }
   }
 
   toggleLikeState() {
 
 
-    if (this.likeState === 'unliked') {
-      this.likeState = 'liked';
+    if (this.like === 'unliked') {
+      this.like = 'liked';
       this.iconName = 'heart';
-      this.data[this.likeState] = 'liked';
-      console.log(this.data[this.likeState]);
+      this.data.likeState = 'liked';
+      this.dataService.data[this.id].likeState = 'liked';
+      // this.dataService.data = 'liked';
+      // this.data[this.likeState] = 'liked';
+
       console.log(this.data);
     } else {
-      this.likeState = 'unliked';
+      this.like = 'unliked';
       this.iconName = 'heart-outline';
-      this.data[this.likeState] = 'unliked';
-      console.log(this.data[this.likeState]);
+      this.data.likeState = 'unliked';
+      this.dataService.data[this.id].likeState  = 'unliked';
+      // this.data[this.likeState] = 'unliked';
+
       console.log(this.data);
     }
   }

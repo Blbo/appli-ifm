@@ -16,5 +16,23 @@
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <!--  Liste des annonces:-->
+
+  <ion-card *ngFor="let annonce of dataService.data">
+    <ion-item *ngIf="annonce.candidature!='false'">
+      <ion-avatar item-start>
+        <img src='{{annonce.img}}'>
+      </ion-avatar>
+      <ion-label>
+        <h2 class="nomSociete">{{annonce.nom}}</h2>
+        <p>
+          {{annonce.offre}}
+          <br>
+          <span>{{annonce.adresse}}</span>
+        </p>
+      </ion-label>
+      <ion-icon id="flecheDroite" name="chevron-forward-outline" button="true" (click)="detailAnnonce(annonce)"></ion-icon>
+    </ion-item>
+  </ion-card>
+
 </ion-content>

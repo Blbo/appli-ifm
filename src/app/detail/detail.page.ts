@@ -13,8 +13,8 @@ export class DetailPage implements OnInit {
   data: any;
 
 
-  public iconName = 'heart-outline';
-  public  iconCandidature = "POSTULER A L'OFFRE";
+  public iconName = '';
+  public  iconCandidature = '';
 
   constructor( private route: ActivatedRoute,
                private router: Router,
@@ -30,36 +30,40 @@ export class DetailPage implements OnInit {
       } else {
         this.iconName = 'heart';
       }
+      if (this.dataService.data[this.data.id].candidature === 'false') {
+        this.iconCandidature = 'POSTULER A L\'OFFRE';
+      } else {
+        this.iconCandidature = 'ANNULER MA CANDIDATURE';
+      }
     }
   }
 
-
   toggleLikeState() {
 
-    console.log("debut : "+this.dataService.data[this.data.id].likeState);
+    console.log('debut : ' + this.dataService.data[this.data.id].likeState);
     if (this.dataService.data[this.data.id].likeState === 'unliked') {
       this.iconName = 'heart';
       this.dataService.data[this.data.id].likeState = 'liked';
 
-      console.log("sortie : "+this.dataService.data[this.data.id].likeState);
+      console.log('sortie : ' + this.dataService.data[this.data.id].likeState);
     } else {
       this.iconName = 'heart-outline';
       this.dataService.data[this.data.id].likeState  = 'unliked';
 
-      console.log("sortie : "+this.dataService.data[this.data.id].likeState);
+      console.log('sortie : ' + this.dataService.data[this.data.id].likeState);
     }
   }
 
   addCandidature() {
-    console.log("entree : "+this.dataService.data[this.data.id].candidature);
+    console.log('entree : ' + this.dataService.data[this.data.id].candidature);
     if (this.dataService.data[this.data.id].candidature === 'false') {
       this.dataService.data[this.data.id].candidature = 'true';
-      this.iconCandidature = "ANNULER MA CANDIDATURE";
+      this.iconCandidature = 'ANNULER MA CANDIDATURE';
 
       console.log(this.dataService.data[this.data.id].candidature);
     } else {
       this.dataService.data[this.data.id].candidature  = 'false';
-      this.iconCandidature = "POSTULER A L'OFFRE";
+      this.iconCandidature = 'POSTULER A L\'OFFRE';
 
       console.log(this.dataService.data[this.data.id].candidature);
     }

@@ -55,12 +55,24 @@ p {
     margin-top: 2px;
 }
 
-#postuler {
+/*#postuler {
   color: white;
-  margin-left: 5%;
-  margin-right: 5%;
-  width: 90%;
-  font-size: 22px;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  font-size: 150%;
   height: 45px;
 
+}*/
+
+#postuler {
+  padding: 0.3em 1.2em;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-weight: 300;
+  text-align: center;
+  transition: all 0.2s;
+  height: 50px;
+  display: block;
 }
+

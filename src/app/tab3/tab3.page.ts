@@ -9,6 +9,9 @@ import { Router} from '@angular/router';
 })
 export class Tab3Page {
 
+  filterData = this.dataService.data;
+  searchJob = '';
+
   constructor(public router: Router,
               public dataService: DataService) {}
 
@@ -17,5 +20,4 @@ export class Tab3Page {
     const URLannonce = '/detail/' + annonce.id;
     this.router.navigateByUrl(URLannonce);
   }
-
 }

@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar class="entete">
     <ion-searchbar [(ngModel)]="searchJob"
-                   (ionInput)="setFilteredLocations($event)"
+                   animated="true"
                    color="light"
                    id="search"
                    search-icon="undefined"
@@ -18,13 +18,13 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense" id="sticky">
     <ion-toolbar id="titreProfil">
-      <ion-title class="titre"><b>{{filterData.length}} profils</b></ion-title>
+      <ion-title class="titre"><b>{{(filterData | filter:searchJob).length}} profils</b></ion-title>
     </ion-toolbar>
   </ion-header>
 
   <!--  Liste des annonces:-->
 
-  <ion-card *ngFor="let annonce of filterData">
+  <ion-card *ngFor="let annonce of filterData | filter:searchJob">
     <ion-item>
       <ion-avatar item-start>
         <img src='{{annonce.img}}'>

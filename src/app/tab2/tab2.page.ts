@@ -9,6 +9,9 @@ import { Router} from '@angular/router';
 })
 export class Tab2Page {
 
+  filterData = this.dataService.data;
+  searchJob = '';
+
   constructor(public router: Router,
               public dataService: DataService) {}
 

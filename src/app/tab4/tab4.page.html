@@ -19,31 +19,30 @@
   <div class="mbsc-grid mbsc-grid-fixed md-custom-usage">
     <div class="mbsc-row mbsc-justify-content-center">
       <div class="mbsc-col-md-10 mbsc-col-xl-9">
-        <h4>Using elements inside existing forms</h4>
         <form class="custom-form">
           <div class="mbsc-row">
             <div class="mbsc-col-md-3 mbsc-col-6">
               <ion-item lines="none">
                 <ion-label id="nomLabel" position="stacked" >Nom</ion-label>
-                <input id="surname" type="text"  class="custom-input" />
+                <input id="surname" type="text"  class="custom-input" value="{{dataService.dataProfil[0].nom}}"/>
               </ion-item>
             </div>
             <div class="mbsc-col-md-3 mbsc-col-6">
               <ion-item lines="none">
                 <ion-label position="stacked" for="firstname">Prénom</ion-label>
-                <input id="firstname" type="text"  class="custom-input" />
+                <input id="firstname" type="text"  class="custom-input" value="{{dataService.dataProfil[0].prenom}}"/>
               </ion-item>
             </div>
             <div class="mbsc-col-md-6 mbsc-col-12">
               <ion-item lines="none">
                 <ion-label position="stacked" for="city">Ville</ion-label>
-                <input id="city" type="text" class="custom-input" />
+                <input id="city" type="text" class="custom-input" value="{{dataService.dataProfil[0].ville}}"/>
               </ion-item>
             </div>
             <div class="mbsc-col-md-6 mbsc-col-12">
               <ion-item lines="none">
                 <ion-label position="stacked" for="email">Email</ion-label>
-                <input id="email" type="email"  class="custom-input" />
+                <input id="email" type="email"  class="custom-input" value="{{dataService.dataProfil[0].email}}"/>
               </ion-item>
             </div>
           </div>
@@ -51,33 +50,33 @@
             <div class="mbsc-col-md-3 mbsc-col-6">
               <ion-item lines="none">
                 <ion-label position="stacked" for="telephone">Téléphone</ion-label>
-                <input id="telephone" type="number"  class="custom-input" />
+                <input id="telephone" type="text"  class="custom-input" value="{{dataService.dataProfil[0].tel}}"/>
               </ion-item>
             </div>
             <div class="mbsc-col-md-3 mbsc-col-6">
               <ion-item lines="none">
                 <ion-label position="stacked" for="contrat">Type de contrat</ion-label>
-                <input id="contrat" type="text"  class="custom-input" />
+                <input id="contrat" type="text"  class="custom-input" value="{{dataService.dataProfil[0].typeContrat}}"/>
               </ion-item>
             </div>
             <div class="mbsc-col-md-3 mbsc-col-6">
               <ion-item lines="none">
                 <ion-label position="stacked" for="emploi">Emploi recherché</ion-label>
-                <input id="emploi" type="text"  class="custom-input" />
+                <input id="emploi" type="text"  class="custom-input" value="{{dataService.dataProfil[0].emploiRecherche}}"/>
               </ion-item>
             </div>
             <div class="localisationRayon">
               <ion-item lines="none">
                 <ion-label position="stacked" for="localisation">Localisation</ion-label>
-                <input id="localisation" type="text"  class="custom-input" />
+                <input id="localisation" type="text"  class="custom-input" value="{{dataService.dataProfil[0].localisation}}" />
                 <ion-label position="stacked" for="rayon">Rayon</ion-label>
-                <input id="rayon" type="text"  class="custom-input" />
+                <input id="rayon" type="text"  class="custom-input" value="{{dataService.dataProfil[0].rayon}}"/>
               </ion-item>
             </div>
             <div class="mbsc-col-md-3 mbsc-col-6">
               <ion-item lines="none">
                 <ion-label position="stacked" for="disponibilite">Disponibilité</ion-label>
-                <input  id="disponibilite" type="text"  class="custom-input" />
+                <input  id="disponibilite" type="text"  class="custom-input" value="{{dataService.dataProfil[0].disponibilite}}"/>
               </ion-item>
             </div>
           </div>

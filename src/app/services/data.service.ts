@@ -247,6 +247,22 @@ export class DataService {
       candidature: 'false'
     }];
 
+  public dataProfil = [ {
+    id: 0,
+    imgProfil: '',
+    nom: 'Jean',
+    prenom: 'Paul',
+    ville: 'METZ',
+    email: 'a@a.com',
+    tel: '06 07 08 09 10',
+    typeContrat: 'CDD',
+    emploiRecherche:  'Developpeur web',
+    localisation: 'METZ',
+    rayon: '10kms',
+    disponibilite: 'Immédiatement',
+    imgCV: ''
+  }];
+
   constructor() { }
 
   setData(id, data) {

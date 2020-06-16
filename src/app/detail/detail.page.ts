@@ -68,14 +68,5 @@ export class DetailPage implements OnInit {
       console.log(this.dataService.data[this.data.id].candidature);
     }
   }
-
-  // changeName() {
-  //   if (this.dataService.data[this.data.id].candidature  = 'false'){
-  //
-  //   } else {
-  //     this.iconCandidature = "ANNULER CETTE CANDIDATURE";
-  //   }
-  // }
-
 }
 

@@ -21,68 +21,148 @@
       <div class="mbsc-col-md-10 mbsc-col-xl-9">
         <form class="custom-form">
           <div class="mbsc-row">
-            <div class="mbsc-col-md-3 mbsc-col-6">
-              <ion-item lines="none">
-                <ion-label id="nomLabel" position="stacked" >Nom</ion-label>
-                <input id="surname" type="text"  class="custom-input" value="{{dataService.dataProfil[0].nom}}"/>
+            <div>
+              <ion-item class="blocInputLabel" lines="none">
+                <ion-label id="nomLabel" class="ion-margin-bottom" position="stacked">Nom</ion-label>
+                <ion-input [(ngModel)]="inputNom"
+                           id="surname"
+                           class="ion-padding"
+                           clearInput="true"
+                           name="nom"
+                           type="text"
+                           value="{{dataService.dataProfil[0].nom}}"
+                           required="true">
+                </ion-input>
               </ion-item>
             </div>
             <div class="mbsc-col-md-3 mbsc-col-6">
-              <ion-item lines="none">
-                <ion-label position="stacked" for="firstname">Prénom</ion-label>
-                <input id="firstname" type="text"  class="custom-input" value="{{dataService.dataProfil[0].prenom}}"/>
+              <ion-item class="blocInputLabel" lines="none">
+                <ion-label position="stacked" id="firstname" class="ion-margin-bottom" >Prénom</ion-label>
+                <ion-input [(ngModel)]="inputPrenom"
+                           id="firstname"
+                           name="prenom"
+                           class="ion-padding"
+                           clearInput="true"
+                           type="text"
+                           required="true"
+                           value="{{dataService.dataProfil[0].prenom}}">
+                </ion-input>
               </ion-item>
             </div>
             <div class="mbsc-col-md-6 mbsc-col-12">
-              <ion-item lines="none">
-                <ion-label position="stacked" for="city">Ville</ion-label>
-                <input id="city" type="text" class="custom-input" value="{{dataService.dataProfil[0].ville}}"/>
+              <ion-item class="blocInputLabel" lines="none">
+                <ion-label position="stacked" id="city" class="ion-margin-bottom">Ville</ion-label>
+                <ion-input [(ngModel)]="inputVille"
+                           id="city"
+                           name="ville"
+                           class="ion-padding"
+                           clearInput="true"
+                           type="text"
+                           required="true"
+                           value="{{dataService.dataProfil[0].ville}}">
+                </ion-input>
               </ion-item>
             </div>
             <div class="mbsc-col-md-6 mbsc-col-12">
-              <ion-item lines="none">
-                <ion-label position="stacked" for="email">Email</ion-label>
-                <input id="email" type="email"  class="custom-input" value="{{dataService.dataProfil[0].email}}"/>
+              <ion-item class="blocInputLabel" lines="none">
+                <ion-label position="stacked" id="email" class="ion-margin-bottom">Email</ion-label>
+                <ion-input [(ngModel)]="inputEmail"
+                           id="email"
+                           name="email"
+                           class="ion-padding"
+                           clearInput="true"
+                           type="email"
+                           required="true"
+                           value="{{dataService.dataProfil[0].email}}">
+                </ion-input>
               </ion-item>
             </div>
           </div>
           <div class="mbsc-row">
             <div class="mbsc-col-md-3 mbsc-col-6">
-              <ion-item lines="none">
-                <ion-label position="stacked" for="telephone">Téléphone</ion-label>
-                <input id="telephone" type="text"  class="custom-input" value="{{dataService.dataProfil[0].tel}}"/>
+              <ion-item class="blocInputLabel" lines="none">
+                <ion-label position="stacked" id="telephone" class="ion-margin-bottom">Téléphone</ion-label>
+                <ion-input [(ngModel)]="inputTel"
+                           id="telephone"
+                           name="telephone"
+                           class="ion-padding"
+                           clearInput="true"
+                           type="text"
+                           required="true"
+                           value="{{dataService.dataProfil[0].tel}}">
+                </ion-input>
               </ion-item>
             </div>
             <div class="mbsc-col-md-3 mbsc-col-6">
-              <ion-item lines="none">
-                <ion-label position="stacked" for="contrat">Type de contrat</ion-label>
-                <input id="contrat" type="text"  class="custom-input" value="{{dataService.dataProfil[0].typeContrat}}"/>
+              <ion-item class="blocInputLabel" lines="none">
+                <ion-label position="stacked" id="contrat" class="ion-margin-bottom">Type de contrat</ion-label>
+                <ion-input [(ngModel)]="inputContrat"
+                           id="contrat"
+                           name="contrat"
+                           type="text"
+                           clearInput="true"
+                           class="ion-padding"
+                           required="true"
+                           value="{{dataService.dataProfil[0].typeContrat}}">
+                </ion-input>
               </ion-item>
             </div>
             <div class="mbsc-col-md-3 mbsc-col-6">
-              <ion-item lines="none">
-                <ion-label position="stacked" for="emploi">Emploi recherché</ion-label>
-                <input id="emploi" type="text"  class="custom-input" value="{{dataService.dataProfil[0].emploiRecherche}}"/>
+              <ion-item class="blocInputLabel" lines="none">
+                <ion-label position="stacked" id="emploi" class="ion-margin-bottom">Emploi recherché</ion-label>
+                <ion-input [(ngModel)]="inputEmploi"
+                           id="emploi"
+                           name="emploi"
+                           type="text"
+                           clearInput="true"
+                           class="ion-padding"
+                           required="true"
+                           value="{{dataService.dataProfil[0].emploiRecherche}}">
+                </ion-input>
               </ion-item>
             </div>
             <div class="localisationRayon">
-              <ion-item lines="none">
-                <ion-label position="stacked" for="localisation">Localisation</ion-label>
-                <input id="localisation" type="text"  class="custom-input" value="{{dataService.dataProfil[0].localisation}}" />
-                <ion-label position="stacked" for="rayon">Rayon</ion-label>
-                <input id="rayon" type="text"  class="custom-input" value="{{dataService.dataProfil[0].rayon}}"/>
+              <ion-item class="blocInputLabel" lines="none">
+                <ion-label position="stacked" id="localisation" class="ion-margin-bottom">Localisation</ion-label>
+                <ion-input [(ngModel)]="inputLocalisation"
+                           id="localisation"
+                           name="localisation"
+                           type="text"
+                           clearInput="true"
+                           class="ion-padding"
+                           required="true"
+                           value="{{dataService.dataProfil[0].localisation}}" >
+                </ion-input>
+                <ion-label position="stacked" id="rayon" class="ion-margin-bottom">Rayon</ion-label>
+                <ion-input [(ngModel)]="inputRayon"
+                           id="rayon"
+                           name="rayon"
+                           type="text"
+                           clearInput="true"
+                           class="ion-padding"
+                           required="true"
+                           value="{{dataService.dataProfil[0].rayon}}">
+                </ion-input>
               </ion-item>
             </div>
             <div class="mbsc-col-md-3 mbsc-col-6">
-              <ion-item lines="none">
-                <ion-label position="stacked" for="disponibilite">Disponibilité</ion-label>
-                <input  id="disponibilite" type="text"  class="custom-input" value="{{dataService.dataProfil[0].disponibilite}}"/>
+              <ion-item class="blocInputLabel" lines="none">
+                <ion-label position="stacked" id="disponibilite" class="ion-margin-bottom">Disponibilité</ion-label>
+                <ion-input  [(ngModel)]="inputDispo"
+                            id="disponibilite"
+                            name="rayon"
+                            type="text"
+                            clearInput="true"
+                            class="ion-padding"
+                            required="true"
+                            value="{{dataService.dataProfil[0].disponibilite}}">
+                </ion-input>
               </ion-item>
             </div>
           </div>
           <div class="mbsc-row">
-            <div class="mbsc-col-6">
-              <ion-button expand="full" shape="round" color="primary">ENREGISTRER</ion-button>
+            <div class="mbsc-col-6 boutonSave">
+              <ion-button id="postuler" color="danger" slot="end" (click)="dataProfilSave()" expand="full" shape="round">ENREGISTRER</ion-button>
             </div>
           </div>
         </form>

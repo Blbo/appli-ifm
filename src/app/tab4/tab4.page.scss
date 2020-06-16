@@ -25,6 +25,31 @@
   display: inline-block;
 }
 
+ion-input {
+  border: solid 1px grey;
+  border-radius: 5px 5px 5px 5px;
+  max-height: 3vh;
+}
 
 
+.ion-padding {
+  --padding-bottom: 0;
+  --padding-top: 0;
+  --padding-start: 15px;
+}
 
+.mbsc-row {
+  padding-right: 10px;
+}
+
+.ion-margin-bottom {
+  margin-bottom: 0;
+}
+
+.blocInputLabel {
+  max-height: 7vh;
+}
+
+.boutonSave {
+  margin-top: 30px;
+}

@@ -1,5 +1,3 @@
-
-
 .entete {
   background-color: rgb(178, 0, 0);
   padding-top: 20px;
@@ -21,21 +19,17 @@
   padding-top: 0;
 }
 
-.localisationRayon {
-  display: inline-block;
-}
-
 ion-input {
   border: solid 1px grey;
   border-radius: 5px 5px 5px 5px;
   max-height: 3vh;
 }
 
-
 .ion-padding {
   --padding-bottom: 0;
   --padding-top: 0;
-  --padding-start: 15px;
+  --padding-start: 12px;
+  max-height:40% !important;
 }
 
 .mbsc-row {
@@ -47,9 +41,27 @@ ion-input {
 }
 
 .blocInputLabel {
-  max-height: 7vh;
+  min-height:50% !important;
 }
 
 .boutonSave {
   margin-top: 30px;
+}
+
+.blocInputLabel2 {
+  display: inline-block;
+  margin-bottom: 5px;
+  width: 50%;
+  max-height:40% !important;
+}
+
+#postuler {
+  padding: 0.3em 1.2em;
+  margin: 0 auto;
+  box-sizing: border-box;
+  font-weight: 300;
+  text-align: center;
+  transition: all 0.2s;
+  height: 50px;
+  display: block;
 }

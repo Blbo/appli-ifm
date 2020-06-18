@@ -23,9 +23,8 @@
           <div class="mbsc-row">
             <div>
               <ion-item class="blocInputLabel" lines="none">
-                <ion-label id="nomLabel" class="ion-margin-bottom" position="stacked">Nom</ion-label>
+                <ion-label class="ion-margin-bottom" position="stacked">Nom</ion-label>
                 <ion-input [(ngModel)]="inputNom"
-                           id="surname"
                            class="ion-padding"
                            clearInput="true"
                            name="nom"
@@ -37,9 +36,8 @@
             </div>
             <div class="mbsc-col-md-3 mbsc-col-6">
               <ion-item class="blocInputLabel" lines="none">
-                <ion-label position="stacked" id="firstname" class="ion-margin-bottom" >Prénom</ion-label>
+                <ion-label position="stacked" class="ion-margin-bottom" >Prénom</ion-label>
                 <ion-input [(ngModel)]="inputPrenom"
-                           id="firstname"
                            name="prenom"
                            class="ion-padding"
                            clearInput="true"
@@ -51,9 +49,8 @@
             </div>
             <div class="mbsc-col-md-6 mbsc-col-12">
               <ion-item class="blocInputLabel" lines="none">
-                <ion-label position="stacked" id="city" class="ion-margin-bottom">Ville</ion-label>
+                <ion-label position="stacked" class="ion-margin-bottom">Ville</ion-label>
                 <ion-input [(ngModel)]="inputVille"
-                           id="city"
                            name="ville"
                            class="ion-padding"
                            clearInput="true"
@@ -65,9 +62,9 @@
             </div>
             <div class="mbsc-col-md-6 mbsc-col-12">
               <ion-item class="blocInputLabel" lines="none">
-                <ion-label position="stacked" id="email" class="ion-margin-bottom">Email</ion-label>
+                <ion-label position="stacked" class="ion-margin-bottom">Email</ion-label>
                 <ion-input [(ngModel)]="inputEmail"
-                           id="email"
+
                            name="email"
                            class="ion-padding"
                            clearInput="true"
@@ -81,9 +78,8 @@
           <div class="mbsc-row">
             <div class="mbsc-col-md-3 mbsc-col-6">
               <ion-item class="blocInputLabel" lines="none">
-                <ion-label position="stacked" id="telephone" class="ion-margin-bottom">Téléphone</ion-label>
+                <ion-label position="stacked" class="ion-margin-bottom">Téléphone</ion-label>
                 <ion-input [(ngModel)]="inputTel"
-                           id="telephone"
                            name="telephone"
                            class="ion-padding"
                            clearInput="true"
@@ -95,9 +91,8 @@
             </div>
             <div class="mbsc-col-md-3 mbsc-col-6">
               <ion-item class="blocInputLabel" lines="none">
-                <ion-label position="stacked" id="contrat" class="ion-margin-bottom">Type de contrat</ion-label>
+                <ion-label position="stacked" class="ion-margin-bottom">Type de contrat</ion-label>
                 <ion-input [(ngModel)]="inputContrat"
-                           id="contrat"
                            name="contrat"
                            type="text"
                            clearInput="true"
@@ -109,9 +104,8 @@
             </div>
             <div class="mbsc-col-md-3 mbsc-col-6">
               <ion-item class="blocInputLabel" lines="none">
-                <ion-label position="stacked" id="emploi" class="ion-margin-bottom">Emploi recherché</ion-label>
+                <ion-label position="stacked" class="ion-margin-bottom">Emploi recherché</ion-label>
                 <ion-input [(ngModel)]="inputEmploi"
-                           id="emploi"
                            name="emploi"
                            type="text"
                            clearInput="true"
@@ -122,10 +116,9 @@
               </ion-item>
             </div>
             <div class="localisationRayon">
-              <ion-item class="blocInputLabel" lines="none">
-                <ion-label position="stacked" id="localisation" class="ion-margin-bottom">Localisation</ion-label>
+              <ion-item class="blocInputLabel2" lines="none">
+                <ion-label position="stacked" class="ion-margin-bottom">Localisation</ion-label>
                 <ion-input [(ngModel)]="inputLocalisation"
-                           id="localisation"
                            name="localisation"
                            type="text"
                            clearInput="true"
@@ -133,9 +126,10 @@
                            required="true"
                            value="{{dataService.dataProfil[0].localisation}}" >
                 </ion-input>
-                <ion-label position="stacked" id="rayon" class="ion-margin-bottom">Rayon</ion-label>
+              </ion-item>
+              <ion-item class="blocInputLabel2" lines="none">
+                <ion-label position="stacked" class="ion-margin-bottom">Rayon</ion-label>
                 <ion-input [(ngModel)]="inputRayon"
-                           id="rayon"
                            name="rayon"
                            type="text"
                            clearInput="true"
@@ -147,9 +141,8 @@
             </div>
             <div class="mbsc-col-md-3 mbsc-col-6">
               <ion-item class="blocInputLabel" lines="none">
-                <ion-label position="stacked" id="disponibilite" class="ion-margin-bottom">Disponibilité</ion-label>
+                <ion-label position="stacked" class="ion-margin-bottom">Disponibilité</ion-label>
                 <ion-input  [(ngModel)]="inputDispo"
-                            id="disponibilite"
                             name="rayon"
                             type="text"
                             clearInput="true"
@@ -160,10 +153,8 @@
               </ion-item>
             </div>
           </div>
-          <div class="mbsc-row">
-            <div class="mbsc-col-6 boutonSave">
-              <ion-button id="postuler" color="danger" slot="end" (click)="dataProfilSave()" expand="full" shape="round">ENREGISTRER</ion-button>
-            </div>
+          <div class="mbsc-col-6 boutonSave">
+            <ion-button id="postuler" color="danger" slot="end" (click)="dataProfilSave()">ENREGISTRER</ion-button>
           </div>
         </form>
       </div>

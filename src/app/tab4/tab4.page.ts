@@ -18,6 +18,7 @@ export class Tab4Page implements OnInit {
   inputTel = this.dataService.dataProfil[0].tel;
   inputContrat = this.dataService.dataProfil[0].typeContrat;
   inputEmploi = this.dataService.dataProfil[0].emploiRecherche;
+  inputRayon = this.dataService.dataProfil[0].rayon;
   inputLocalisation = this.dataService.dataProfil[0].localisation;
   inputDispo = this.dataService.dataProfil[0].disponibilite;
 
@@ -33,8 +34,7 @@ export class Tab4Page implements OnInit {
 
 
   dataProfilSave() {
-    console.log(this.inputNom);
-    console.log(this.dataService.dataProfil[0].nom);
+
     if (this.inputNom !== '' || this.inputNom !== this.dataService.dataProfil[0].nom) {
       this.dataService.dataProfil[0].nom = this.inputNom;
     }
@@ -56,9 +56,14 @@ export class Tab4Page implements OnInit {
     if (this.inputLocalisation !== '' || this.inputLocalisation !== this.dataService.dataProfil[0].localisation) {
       this.dataService.dataProfil[0].localisation = this.inputLocalisation;
     }
+    if (this.inputEmploi !== '' || this.inputEmploi !== this.dataService.dataProfil[0].emploiRecherche) {
+      this.dataService.dataProfil[0].emploiRecherche = this.inputEmploi;
+    }
+    if (this.inputRayon !== '' || this.inputRayon !== this.dataService.dataProfil[0].rayon) {
+      this.dataService.dataProfil[0].rayon = this.inputRayon;
+    }
     if (this.inputDispo !== '' || this.inputDispo !== this.dataService.dataProfil[0].disponibilite) {
       this.dataService.dataProfil[0].disponibilite = this.inputDispo;
     }
-
   }
 }
